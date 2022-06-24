@@ -17,7 +17,9 @@
 
 import csv
 import json
+import librosa
 import os
+import sys
 import yaml
 
 from pathlib import Path
@@ -100,7 +102,6 @@ class MustC(datasets.GeneratorBasedBuilder):
     def _info(self):
         features = datasets.Features(
             {
-                "file": datasets.Value("string"),
                 "duration": datasets.Value("float"),
                 "offset" : datasets.Value("float"),
                 "speaker_id": datasets.Value("string"),
@@ -152,19 +153,33 @@ class MustC(datasets.GeneratorBasedBuilder):
         sources = open(data_dir / "data" / split / "txt" / f"{split}.{_SRC}").readlines()
         targets = open(data_dir / "data" / split / "txt" / f"{split}.{language}").readlines()
 
+
         for key, (source,target,audio_segment) in enumerate(zip(sources,targets,audio_segments)):
-            filename = None # TODO
-            audio = None # TODO
-           
+            #if key >= 1: break
+            
+            
+            filename = (data_dir / "data" / split / "wav" / audio_segment["wav"]).as_posix()
+            audio_bytes, sampling_rate = librosa.load(
+                filename,
+                duration = float(audio_segment['duration']),
+                offset = float(audio_segment['offset']),
+                mono = True,
+                sr = 16000  )
+            
+            
+            #print(audio_bytes)
 
 
             example = {
-                "file" : filename,
                 "duration" : audio_segment["duration"],
                 "offset" : audio_segment["offset"],
                 "speaker_id" : audio_segment["speaker_id"],
                 "doc_id" : audio_segment["wav"],
-                "audio" : audio,
+                "audio" : {
+                    "array" : audio_bytes,
+                    "path" : audio_segment["wav"],
+                    "sampling_rate" : sampling_rate,
+                },
                 "transcript" : source.strip(),
                 "translation" : target.strip(),
             }
