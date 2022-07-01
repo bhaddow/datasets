@@ -144,6 +144,8 @@ class MustC(datasets.GeneratorBasedBuilder):
         return [
             #datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={"split": "train", "data_dir": data_dir}),
             datasets.SplitGenerator(name=datasets.Split.VALIDATION, gen_kwargs={"language" : language, "split": "dev", "data_dir": data_dir}),
+            datasets.SplitGenerator(name=datasets.Split.TEST, gen_kwargs={"language" : language, "split": "tst-COMMON", "data_dir": data_dir}),
+            datasets.SplitGenerator(name=datasets.Split.TRAIN, gen_kwargs={"language" : language, "split": "train", "data_dir": data_dir}),
         ]
         
 
