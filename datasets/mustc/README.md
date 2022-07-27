@@ -1,8 +1,35 @@
 ---
-TODO: Add YAML tags here. Copy-paste the tags obtained with the online tagging app: https://huggingface.co/spaces/huggingface/datasets-tagging
+annotations_creators:
+- expert-generated
+language:
+- en
+- es
+- fr
+- ru
+- pt
+- ro
+- nl
+- it
+- de
+language_creators:
+- found
+license:
+- cc-by-nc-nd-4.0
+multilinguality:
+- translation
+pretty_name: A Multilingual speech translation corpus.
+size_categories:
+- 100K<n<1M
+source_datasets:
+- original
+tags: []
+task_categories:
+- translation
+- automatic-speech-recognition
+task_ids: []
 ---
 
-# Dataset Card for [Dataset Name]
+# Dataset Card for MuST-C v1.0
 
 ## Table of Contents
 - [Table of Contents](#table-of-contents)
@@ -31,25 +58,27 @@ TODO: Add YAML tags here. Copy-paste the tags obtained with the online tagging a
 
 ## Dataset Description
 
-- **Homepage:**
-- **Repository:**
-- **Paper:**
-- **Leaderboard:**
-- **Point of Contact:**
+- **Homepage:  https://ict.fbk.eu/must-c/**
+- **Repository: n/a**
+- **Paper: https://doi.org/10.1016/j.csl.2020.101155**
+- **Leaderboard: n/a**
+- **Point of Contact: Roldano Cattoni**
 
 ### Dataset Summary
 
-[More Information Needed]
+MuST-C is a multilingual speech translation corpus whose size and quality facilitates the training of end-to-end systems for speech translation from English into several languages. For each target language, MuST-C comprises several hundred hours of audio recordings from English TED Talks, which are automatically aligned at the sentence level with their manual transcriptions and translations.
 
 ### Supported Tasks and Leaderboards
 
-[More Information Needed]
+MuST-C has been used in several recent IWSLT shared tasks  
 
 ### Languages
 
-[More Information Needed]
+English audio, translated into Dutch, French, German, Italian, Portugese,  Romanian, Russian and Spanish. 
 
 ## Dataset Structure
+
+The data set consists of TED talks, and their translations into the target language.
 
 ### Data Instances
 
@@ -123,4 +152,4 @@ TODO: Add YAML tags here. Copy-paste the tags obtained with the online tagging a
 
 ### Contributions
 
-Thanks to [@github-username](https://github.com/<github-username>) for adding this dataset.
+Thanks to [@bhaddow](https://github.com/<github-username>) for adding this dataset.

@@ -30,16 +30,21 @@ from datasets.tasks import AutomaticSpeechRecognition
 
 
 _CITATION = """\
-@inproceedings{di_gangi_must-c_2019,
-	address = {Minneapolis, Minnesota},
-	title = {{MuST}-{C}: a {Multilingual} {Speech} {Translation} {Corpus}},
-	url = {https://www.aclweb.org/anthology/N19-1202},
-	doi = {10.18653/v1/N19-1202},
-	abstract = {Current research on spoken language translation (SLT) has to confront with the scarcity of sizeable and publicly available training corpora. This problem hinders the adoption of neural end-to-end approaches, which represent the state of the art in the two parent tasks of SLT: automatic speech recognition and machine translation. To fill this gap, we created MuST-C, a multilingual speech translation corpus whose size and quality will facilitate the training of end-to-end systems for SLT from English into 8 languages. For each target language, MuST-C comprises at least 385 hours of audio recordings from English TED Talks, which are automatically aligned at the sentence level with their manual transcriptions and translations. Together with a description of the corpus creation methodology (scalable to add new data and cover new languages), we provide an empirical verification of its quality and SLT results computed with a state-of-the-art approach on each language direction.},
-	booktitle = {Proceedings of the 2019 {Conference} of the {North} {American} {Chapter} of the {Association} for {Computational} {Linguistics}: {Human} {Language} {Technologies}, {Volume} 1 ({Long} and {Short} {Papers})},
-	publisher = {Association for Computational Linguistics},
-	author = {Di Gangi, Mattia A. and Cattoni, Roldano and Bentivogli, Luisa and Negri, Matteo and Turchi, Marco},
+@article{cattoni_must-c_2021,
+        title = {{MuST}-{C}: {A} multilingual corpus for end-to-end speech translation},
+        volume = {66},
+        issn = {0885-2308},
+        shorttitle = {{MuST}-{C}},
+        url = {https://www.sciencedirect.com/science/article/pii/S0885230820300887},
+        doi = {10.1016/j.csl.2020.101155},
+        language = {en},
+        journal = {Computer Speech \& Language},
+        author = {Cattoni, Roldano and Di Gangi, Mattia Antonino and Bentivogli, Luisa and Negri, Matteo and Turchi, Marco},
+        month = mar,
+        year = {2021},
+        pages = {101155}
 }
+
 """
 
 
@@ -48,15 +53,13 @@ _DESCRIPTION = """\
 tion corpus whose size and quality will facili-
 tate the training of end-to-end systems for SLT
 from English into 8 languages. 
-
-TODO: complete this
 """
 
-# TODO: Add a link to an official homepage for the dataset here
-_HOMEPAGE = ""
 
-# TODO: Add the licence for the dataset here if you can find it
-_LICENSE = ""
+_HOMEPAGE = "https://ict.fbk.eu/must-c/"
+
+
+_LICENSE = "cc-by-nc-nd-4.0"
 
 _LANGUAGES = ("de", "es", "fr", "it" , "nl",  "pt", "ro", "ru")
 
@@ -95,7 +98,7 @@ class MustC(datasets.GeneratorBasedBuilder):
         return (
             "To use MuST-C you must download it manually."
             "Then load the dataset with: "
-            "`datasets.load_dataset('mustc', data_dir='path/to/foldername'" 
+            "`datasets.load_dataset('mustc', data_dir='path/to/foldername', language='target-language')'" 
         )
 
 
