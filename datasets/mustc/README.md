@@ -62,7 +62,7 @@ task_ids: []
 - **Repository: n/a**
 - **Paper: https://doi.org/10.1016/j.csl.2020.101155**
 - **Leaderboard: n/a**
-- **Point of Contact: Roldano Cattoni**
+- **Point of Contact: Barry Haddow (bhaddow@ed.ac.uk), for the datasets integration**
 
 ### Dataset Summary
 
