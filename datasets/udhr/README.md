@@ -3,7 +3,7 @@ annotations_creators:
 - no-annotation
 language_creators:
 - found
-languages:
+language:
 - aa
 - ab
 - ace
@@ -28,8 +28,6 @@ languages:
 - auc
 - ay
 - az
-- az-Cyrl
-- az-Latn
 - ban
 - bax
 - bba
@@ -49,8 +47,6 @@ languages:
 - boa
 - br
 - bs
-- bs-Cyrl
-- bs-Latn
 - buc
 - bug
 - bum
@@ -74,7 +70,6 @@ languages:
 - cjs
 - cjy
 - ckb
-- ckb-Latn
 - cnh
 - cni
 - cnr
@@ -94,8 +89,6 @@ languages:
 - dag
 - ddn
 - de
-- de-1901
-- de-1996
 - dga
 - dip
 - duu
@@ -105,8 +98,6 @@ languages:
 - dz
 - ee
 - el
-- el-monoton
-- el-polyton
 - en
 - eo
 - es
@@ -116,7 +107,6 @@ languages:
 - eve
 - evn
 - fa
-- fa-AF
 - fat
 - fi
 - fj
@@ -125,7 +115,6 @@ languages:
 - fon
 - fr
 - fuf
-- fuf-Adlm
 - fur
 - fuv
 - fvr
@@ -148,8 +137,6 @@ languages:
 - gyr
 - ha
 - hak
-- ha-NE
-- ha-NG
 - haw
 - he
 - hi
@@ -184,7 +171,6 @@ languages:
 - ja
 - jiv
 - jv
-- jv-Java
 - ka
 - kaa
 - kbd
@@ -194,12 +180,10 @@ languages:
 - kea
 - kek
 - kg
-- kg-AO
 - kha
 - kjh
 - kk
 - kkh
-- kkh-Lana
 - kl
 - km
 - kmb
@@ -255,7 +239,6 @@ languages:
 - mk
 - ml
 - mn
-- mn-Cyrl
 - mnw
 - mor
 - mos
@@ -312,8 +295,6 @@ languages:
 - prq
 - ps
 - pt
-- pt-BR
-- pt-PT
 - qu
 - quc
 - qug
@@ -331,19 +312,12 @@ languages:
 - rgn
 - rm
 - rmn
-- rm-puter
-- rm-rumgr
-- rm-surmiran
-- rm-sursilv
-- rm-sutsilv
-- rm-vallader
 - rn
 - ro
 - ru
 - rup
 - rw
 - sa
-- sa-Gran
 - sah
 - sc
 - sco
@@ -364,8 +338,6 @@ languages:
 - snn
 - so
 - sr
-- sr-Cyrl
-- sr-Latn
 - srr
 - ss
 - st
@@ -377,7 +349,6 @@ languages:
 - swb
 - ta
 - taj
-- ta-LK
 - tbz
 - tca
 - tdt
@@ -389,8 +360,6 @@ languages:
 - ti
 - tiv
 - tk
-- tk-Cyrl
-- tk-Latn
 - tl
 - tly
 - tn
@@ -404,8 +373,7 @@ languages:
 - ts
 - tsz
 - tt
-- tw-akuapem
-- tw-asante
+- tw
 - ty
 - tyv
 - tzh
@@ -413,22 +381,17 @@ languages:
 - tzo
 - udu
 - ug
-- ug-Arab
-- ug-Latn
 - uk
 - umb
 - und
 - ur
 - ura
 - uz
-- uz-Cyrl
-- uz-Latn
 - vai
 - ve
 - vec
 - vep
 - vi
-- vi-Hani
 - vmw
 - wa
 - war
@@ -451,14 +414,53 @@ languages:
 - zdj
 - zgh
 - zh
-- zh-Hant
 - zlm
-- zlm-Arab
-- zlm-Latn
 - zro
 - ztu
 - zu
-licenses:
+language_bcp47:
+- az-Cyrl
+- az-Latn
+- bs-Cyrl
+- bs-Latn
+- ckb-Latn
+- de-1901
+- de-1996
+- el-monoton
+- el-polyton
+- fa-AF
+- fuf-Adlm
+- ha-NE
+- ha-NG
+- jv-Java
+- kg-AO
+- kkh-Lana
+- mn-Cyrl
+- pt-BR
+- pt-PT
+- rm-puter
+- rm-rumgr
+- rm-surmiran
+- rm-sursilv
+- rm-sutsilv
+- rm-vallader
+- sa-Gran
+- sr-Cyrl
+- sr-Latn
+- ta-LK
+- tk-Cyrl
+- tk-Latn
+- tw-akuapem
+- tw-asante
+- ug-Arab
+- ug-Latn
+- uz-Cyrl
+- uz-Latn
+- vi-Hani
+- zh-Hant
+- zlm-Arab
+- zlm-Latn
+license:
 - unknown
 multilinguality:
 - multilingual

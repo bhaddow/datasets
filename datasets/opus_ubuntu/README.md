@@ -4,7 +4,7 @@ annotations_creators:
 - expert-generated
 language_creators:
 - found
-languages:
+language:
 - ace
 - af
 - ak
@@ -12,7 +12,6 @@ languages:
 - an
 - ang
 - ar
-- ar-SY
 - ary
 - as
 - ast
@@ -25,7 +24,6 @@ languages:
 - bg
 - bho
 - bn
-- bn-IN
 - bo
 - br
 - brx
@@ -45,48 +43,21 @@ languages:
 - cy
 - da
 - de
-- de-AT
-- de-DE
 - dsb
 - dv
 - dz
 - el
 - en
-- en-AU
-- en-CA
-- en-GB
-- en-NZ
-- en-US
 - eo
 - es
-- es-AR
-- es-CL
-- es-CO
-- es-CR
-- es-DO
-- es-EC
-- es-ES
-- es-GT
-- es-HN
-- es-MX
-- es-NI
-- es-PA
-- es-PE
-- es-PR
-- es-SV
-- es-UY
-- es-VE
 - et
 - eu
 - fa
-- fa-AF
 - ff
 - fi
 - fil
 - fo
 - fr
-- fr-CA
-- fr-FR
 - frm
 - frp
 - fur
@@ -166,9 +137,8 @@ languages:
 - ne
 - nhn
 - nl
-- nl-NL
 - nn
-- "no"
+- 'no'
 - nso
 - ny
 - oc
@@ -183,8 +153,6 @@ languages:
 - pmy
 - ps
 - pt
-- pt-BR
-- pt-PT
 - qu
 - rm
 - ro
@@ -214,7 +182,6 @@ languages:
 - syr
 - szl
 - ta
-- ta-LK
 - te
 - tet
 - tg
@@ -242,12 +209,46 @@ languages:
 - yi
 - yo
 - zh
+- zu
+- zza
+language_bcp47:
+- ar-SY
+- bn-IN
+- de-AT
+- de-DE
+- en-AU
+- en-CA
+- en-GB
+- en-NZ
+- en-US
+- es-AR
+- es-CL
+- es-CO
+- es-CR
+- es-DO
+- es-EC
+- es-ES
+- es-GT
+- es-HN
+- es-MX
+- es-NI
+- es-PA
+- es-PE
+- es-PR
+- es-SV
+- es-UY
+- es-VE
+- fa-AF
+- fr-CA
+- fr-FR
+- nl-NL
+- pt-BR
+- pt-PT
+- ta-LK
 - zh-CN
 - zh-HK
 - zh-TW
-- zu
-- zza
-licenses:
+license:
 - bsd-3-clause
 multilinguality:
 - multilingual

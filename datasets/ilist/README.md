@@ -5,25 +5,25 @@ multilinguality:
 - multilingual
 task_ids:
 - text-classification-other-language-identification
-languages:
-- hi
+language:
 - awa
 - bho
-- mag
 - bra
+- hi
+- mag
 annotations_creators:
 - unknown
 source_datasets:
 - original
 size_categories:
 - 10K<n<100K
-licenses:
+license:
 - unknown
 paperswithcode_id: null
 pretty_name: ilist
 ---
 
-# Dataset Card Creation Guide
+# Dataset Card for ilist
 
 ## Table of Contents
 - [Dataset Description](#dataset-description)

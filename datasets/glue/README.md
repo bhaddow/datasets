@@ -1,18 +1,18 @@
 ---
 annotations_creators:
-- unknown
+- other
 language_creators:
-- unknown
-languages:
+- other
+language:
 - en
-licenses:
+license:
 - cc-by-4.0
 multilinguality:
 - monolingual
 size_categories:
 - 10K<n<100K
 source_datasets:
-- unknown
+- original
 task_categories:
 - text-classification
 task_ids:

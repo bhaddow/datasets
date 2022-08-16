@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Lint as: python3
-""" List and inspect datasets and metrics."""
+""" List and inspect datasets."""
 
 import inspect
 import os
@@ -28,6 +28,7 @@ from .download.download_manager import DownloadMode
 from .download.streaming_download_manager import StreamingDownloadManager
 from .info import DatasetInfo
 from .load import dataset_module_factory, import_main_class, load_dataset_builder, metric_module_factory
+from .utils.deprecation_utils import deprecated
 from .utils.file_utils import relative_to_absolute_path
 from .utils.logging import get_logger
 from .utils.version import Version
@@ -70,8 +71,17 @@ def list_datasets(with_community_datasets=True, with_details=False):
     return datasets
 
 
+@deprecated(
+    "Use 'evaluate.list_evaluation_modules' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate"
+)
 def list_metrics(with_community_metrics=True, with_details=False):
     """List all the metrics script available on the Hugging Face Hub.
+
+    <Deprecated version="2.5.0">
+
+    Use `evaluate.list_evaluation_modules` instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate
+
+    </Deprecated>
 
     Args:
         with_community_metrics (:obj:`bool`, optional, default ``True``): Include the community provided metrics.
@@ -138,9 +148,18 @@ def inspect_dataset(path: str, local_path: str, download_config: Optional[Downlo
     )
 
 
+@deprecated(
+    "Use 'evaluate.inspect_evaluation_module' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate"
+)
 def inspect_metric(path: str, local_path: str, download_config: Optional[DownloadConfig] = None, **download_kwargs):
     r"""
     Allow inspection/modification of a metric script by copying it on local drive at local_path.
+
+    <Deprecated version="2.5.0">
+
+    Use `evaluate.inspect_evaluation_module` instead, from the new library 🤗 Evaluate instead: https://huggingface.co/docs/evaluate
+
+    </Deprecated>
 
     Args:
         path (``str``): path to the dataset processing script with the dataset builder. Can be either:
@@ -195,7 +214,7 @@ def get_dataset_infos(
             If specified, the dataset module will be loaded from the datasets repository at this version.
             By default:
             - it is set to the local version of the lib.
-            - it will also try to load it from the master branch if it's not available at the local version of the lib.
+            - it will also try to load it from the main branch if it's not available at the local version of the lib.
             Specifying a version that is different from your local version of the lib might cause compatibility issues.
         download_config (:class:`DownloadConfig`, optional): Specific download configuration parameters.
         download_mode (:class:`DownloadMode`, default ``REUSE_DATASET_IF_EXISTS``): Download/generate mode.
@@ -256,7 +275,7 @@ def get_dataset_config_names(
             If specified, the dataset module will be loaded from the datasets repository at this version.
             By default:
             - it is set to the local version of the lib.
-            - it will also try to load it from the master branch if it's not available at the local version of the lib.
+            - it will also try to load it from the main branch if it's not available at the local version of the lib.
             Specifying a version that is different from your local version of the lib might cause compatibility issues.
         download_config (:class:`DownloadConfig`, optional): Specific download configuration parameters.
         download_mode (:class:`DownloadMode`, default ``REUSE_DATASET_IF_EXISTS``): Download/generate mode.
@@ -325,7 +344,7 @@ def get_dataset_config_info(
         revision (:class:`~utils.Version` or :obj:`str`, optional): Version of the dataset script to load:
 
             - For datasets in the `huggingface/datasets` library on GitHub like "squad", the default version of the module is the local version of the lib.
-              You can specify a different version from your local version of the lib (e.g. "master" or "1.2.0") but it might cause compatibility issues.
+              You can specify a different version from your local version of the lib (e.g. "main" or "1.2.0") but it might cause compatibility issues.
             - For community datasets like "lhoestq/squad" that have their own git repository on the Datasets Hub, the default version "main" corresponds to the "main" branch.
               You can specify a different version that the default "main" by using a commit sha or a git tag of the dataset repository.
         use_auth_token (``str`` or :obj:`bool`, optional): Optional string or boolean to use as Bearer token for remote files on the Datasets Hub.
@@ -386,7 +405,7 @@ def get_dataset_split_names(
         revision (:class:`~utils.Version` or :obj:`str`, optional): Version of the dataset script to load:
 
             - For datasets in the `huggingface/datasets` library on GitHub like "squad", the default version of the module is the local version of the lib.
-              You can specify a different version from your local version of the lib (e.g. "master" or "1.2.0") but it might cause compatibility issues.
+              You can specify a different version from your local version of the lib (e.g. "main" or "1.2.0") but it might cause compatibility issues.
             - For community datasets like "lhoestq/squad" that have their own git repository on the Datasets Hub, the default version "main" corresponds to the "main" branch.
               You can specify a different version that the default "main" by using a commit sha or a git tag of the dataset repository.
         use_auth_token (``str`` or :obj:`bool`, optional): Optional string or boolean to use as Bearer token for remote files on the Datasets Hub.
