@@ -62,7 +62,7 @@ task_ids: []
 - **Repository: n/a**
 - **Paper: https://doi.org/10.1016/j.csl.2020.101155**
 - **Leaderboard: n/a**
-- **Point of Contact: Barry Haddow (bhaddow@ed.ac.uk), for the datasets integration**
+- **Point of Contact: Barry Haddow (bhaddow@ed.ac.uk), for the datasets integration. See the paper for the authors of the dataset.**
 
 ### Dataset Summary
 
@@ -70,7 +70,7 @@ MuST-C is a multilingual speech translation corpus whose size and quality facili
 
 ### Supported Tasks and Leaderboards
 
-MuST-C has been used in several recent IWSLT shared tasks  
+MuST-C has been used in several recent IWSLT shared tasks
 
 ### Languages
 
@@ -82,21 +82,28 @@ The data set consists of TED talks, and their translations into the target langu
 
 ### Data Instances
 
-[More Information Needed]
+The number of instances can be found in the `dataset_infos.json` file.
 
 ### Data Fields
 
-[More Information Needed]
+Each instances contains the following foelds:
+- `audio` : An array containing the audio data.
+- `transcript` : The transcription in the target language (English)
+- `translation` : The translation into the target language
+- `doc_id` : The identifier of the TED talk
+- `offset` : The offset of the audio in the talk (in seconds)
+- `duraction` : The length of the audio (in seconds)
+- `speaker_id` : An identifier for the speaker 
 
 ### Data Splits
 
-[More Information Needed]
+There are three splits in the data: `train`, `dev` and `test`. The last coresponds to `tst-COMMON` in the released data set.
 
 ## Dataset Creation
 
 ### Curation Rationale
 
-[More Information Needed]
+The data was gathered from TED talks, whenever they could be aligned with translated captions.
 
 ### Source Data
 
@@ -152,4 +159,4 @@ The data set consists of TED talks, and their translations into the target langu
 
 ### Contributions
 
-Thanks to [@bhaddow](https://github.com/<github-username>) for adding this dataset.
+Thanks to [@bhaddow](https://github.com/bhaddow) for adding this dataset.
